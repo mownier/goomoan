@@ -1,4 +1,4 @@
-// @filename moduel.go
+// @filename module.go
 // @author mownier
 
 package goomoan
@@ -8,11 +8,11 @@ type Route struct {
 	Path   string
 }
 
-func NewRoute(m, p string) *Route {
-	r := new(Route)
-	r.Action = m
-	r.Path = p
-	return r
+func NewRoute(action, path string) *Route {
+	return &Route{
+			Action: action,
+			Path: path,
+		}
 }
 
 type Module struct {
