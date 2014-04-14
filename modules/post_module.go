@@ -23,7 +23,6 @@ func (m *PostModule) SendPost(params url.Values) (int, *models.PostModel) {
 	u.LastName = "Dela Cruz"
 	u.Username = "iamjuan"
 	u.Avatar = "avatar.jpg"
-	u.Password = "1234567890"
 
 	p := new(models.PostModel)
 	p.Id = "100"
