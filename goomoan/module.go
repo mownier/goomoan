@@ -1,21 +1,21 @@
-// @filename controller.go
+// @filename moduel.go
 // @author mownier
 
-package core
+package goomoan
 
 type Route struct {
-	Method string
+	Action string
 	Path   string
 }
 
 func NewRoute(m, p string) *Route {
 	r := new(Route)
-	r.Method = m
+	r.Action = m
 	r.Path = p
 	return r
 }
 
 type Module struct {
+	Name   string
 	Routes map[string]*Route
 }
-

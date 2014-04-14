@@ -5,13 +5,11 @@ package main
 
 import ( 
 	"fmt"
-	"goomoan/core"
-	"goomoan/modules"
+	"goomoan/goomoan"
 )
 
 func main() {
 	fmt.Println("Welcome to Goomoan v0.0.1")
-	s := new(core.Server)	
-	s.AddModule(modules.NewPostModule())
-	s.Start(5454)
+	app := new(goomoan.Application)
+	app.Start(5454)
 }
